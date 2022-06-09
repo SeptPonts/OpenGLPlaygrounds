@@ -5,14 +5,14 @@ empty:=
 space:= $(empty) $(empty)
 spaceplus:= $(empty)\ $(empty)
 
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/CMakeLists.txt))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/cmake/modules/FindASSIMP.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/cmake/modules/FindGLFW3.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/cmake/modules/FindGLM.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/configuration/root_directory.h.in))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/xcode_opengl_proj/CMakeFiles/3.23.2/CMakeCCompiler.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/xcode_opengl_proj/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake))
-TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/xcode_opengl_proj/CMakeFiles/3.23.2/CMakeSystem.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/OpenGLPlaygrounds/CMakeLists.txt))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/OpenGLPlaygrounds/cmake/modules/FindASSIMP.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/OpenGLPlaygrounds/cmake/modules/FindGLFW3.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/OpenGLPlaygrounds/cmake/modules/FindGLM.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/OpenGLPlaygrounds/configuration/root_directory.h.in))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/OpenGLPlaygrounds/xcode_opengl_proj/CMakeFiles/3.23.2/CMakeCCompiler.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/OpenGLPlaygrounds/xcode_opengl_proj/CMakeFiles/3.23.2/CMakeCXXCompiler.cmake))
+TARGETS += $(subst $(space),$(spaceplus),$(wildcard /Users/chevisli/Desktop/OpenGLPlaygrounds/xcode_opengl_proj/CMakeFiles/3.23.2/CMakeSystem.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCCompiler.cmake.in))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCCompilerABI.c))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/CMakeCInformation.cmake))
@@ -112,5 +112,5 @@ TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/Platform/UnixPaths.cmake))
 TARGETS += $(subst $(space),$(spaceplus),$(wildcard /opt/homebrew/Cellar/cmake/3.23.2/share/cmake/Modules/SelectLibraryConfigurations.cmake))
 
-/Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/xcode_opengl_proj/CMakeFiles/cmake.check_cache: $(TARGETS)
-	/opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -H/Users/chevisli/Desktop/aaa/OpenGLPlaygrounds -B/Users/chevisli/Desktop/aaa/OpenGLPlaygrounds/xcode_opengl_proj
+/Users/chevisli/Desktop/OpenGLPlaygrounds/xcode_opengl_proj/CMakeFiles/cmake.check_cache: $(TARGETS)
+	/opt/homebrew/Cellar/cmake/3.23.2/bin/cmake -H/Users/chevisli/Desktop/OpenGLPlaygrounds -B/Users/chevisli/Desktop/OpenGLPlaygrounds/xcode_opengl_proj

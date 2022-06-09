@@ -1,1 +1,1 @@
-const char * logl_root = "/Users/chevisli/Desktop/aaa/OpenGLPlaygrounds";
+const char * logl_root = "/Users/chevisli/Desktop/OpenGLPlaygrounds";

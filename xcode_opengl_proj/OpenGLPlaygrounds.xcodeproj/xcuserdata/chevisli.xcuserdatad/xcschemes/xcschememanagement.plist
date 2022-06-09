@@ -7,462 +7,467 @@
 		<key>1.getting_started__1.1.hello_window.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>1.getting_started__1.2.hello_window_clear.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>6</integer>
 		</dict>
 		<key>1.getting_started__2.1.hello_triangle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>7</integer>
 		</dict>
 		<key>1.getting_started__2.2.hello_triangle_indexed.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>1.getting_started__2.3.hello_triangle_exercise1.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>9</integer>
 		</dict>
 		<key>1.getting_started__2.4.hello_triangle_exercise2.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>10</integer>
 		</dict>
 		<key>1.getting_started__2.5.hello_triangle_exercise3.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>10</integer>
+			<integer>11</integer>
 		</dict>
 		<key>1.getting_started__3.1.shaders_uniform.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>12</integer>
 		</dict>
 		<key>1.getting_started__3.2.shaders_interpolation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>13</integer>
 		</dict>
 		<key>1.getting_started__3.3.shaders_class.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>14</integer>
 		</dict>
 		<key>1.getting_started__4.1.textures.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>14</integer>
+			<integer>15</integer>
 		</dict>
 		<key>1.getting_started__4.2.textures_combined.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>15</integer>
+			<integer>16</integer>
 		</dict>
 		<key>1.getting_started__4.4.textures_exercise2.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>16</integer>
+			<integer>17</integer>
 		</dict>
 		<key>1.getting_started__4.5.textures_exercise3.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>18</integer>
 		</dict>
 		<key>1.getting_started__4.6.textures_exercise4.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>18</integer>
+			<integer>19</integer>
 		</dict>
 		<key>1.getting_started__5.1.transformations.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>20</integer>
 		</dict>
 		<key>1.getting_started__5.2.transformations_exercise2.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>21</integer>
 		</dict>
 		<key>1.getting_started__6.1.coordinate_systems.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>21</integer>
+			<integer>22</integer>
 		</dict>
 		<key>1.getting_started__6.2.coordinate_systems_depth.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>23</integer>
 		</dict>
 		<key>1.getting_started__6.3.coordinate_systems_multiple.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>24</integer>
 		</dict>
 		<key>1.getting_started__7.1.camera_circle.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>24</integer>
+			<integer>25</integer>
 		</dict>
 		<key>1.getting_started__7.2.camera_keyboard_dt.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>25</integer>
+			<integer>26</integer>
 		</dict>
 		<key>1.getting_started__7.3.camera_mouse_zoom.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>26</integer>
+			<integer>27</integer>
 		</dict>
 		<key>1.getting_started__7.4.camera_class.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>27</integer>
+			<integer>28</integer>
 		</dict>
 		<key>2.lighting__1.colors.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>28</integer>
+			<integer>29</integer>
 		</dict>
 		<key>2.lighting__2.1.basic_lighting_diffuse.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>29</integer>
+			<integer>30</integer>
 		</dict>
 		<key>2.lighting__2.2.basic_lighting_specular.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>30</integer>
+			<integer>31</integer>
 		</dict>
 		<key>2.lighting__3.1.materials.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>31</integer>
+			<integer>32</integer>
 		</dict>
 		<key>2.lighting__3.2.materials_exercise1.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>32</integer>
+			<integer>33</integer>
 		</dict>
 		<key>2.lighting__4.1.lighting_maps_diffuse_map.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>33</integer>
+			<integer>34</integer>
 		</dict>
 		<key>2.lighting__4.2.lighting_maps_specular_map.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>34</integer>
+			<integer>35</integer>
 		</dict>
 		<key>2.lighting__4.4.lighting_maps_exercise4.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>35</integer>
+			<integer>36</integer>
 		</dict>
 		<key>2.lighting__5.1.light_casters_directional.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>36</integer>
+			<integer>37</integer>
 		</dict>
 		<key>2.lighting__5.2.light_casters_point.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>37</integer>
+			<integer>38</integer>
 		</dict>
 		<key>2.lighting__5.3.light_casters_spot.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>38</integer>
+			<integer>39</integer>
 		</dict>
 		<key>2.lighting__5.4.light_casters_spot_soft.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>39</integer>
+			<integer>40</integer>
 		</dict>
 		<key>2.lighting__6.multiple_lights.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>40</integer>
+			<integer>41</integer>
 		</dict>
 		<key>3.model_loading__1.model_loading.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>41</integer>
+			<integer>42</integer>
 		</dict>
 		<key>4.advanced_opengl__1.1.depth_testing.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>42</integer>
+			<integer>43</integer>
 		</dict>
 		<key>4.advanced_opengl__1.2.depth_testing_view.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>43</integer>
+			<integer>44</integer>
 		</dict>
 		<key>4.advanced_opengl__10.1.instancing_quads.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>87</integer>
+			<integer>56</integer>
 		</dict>
 		<key>4.advanced_opengl__10.2.asteroids.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>53</integer>
+			<integer>57</integer>
 		</dict>
 		<key>4.advanced_opengl__10.3.asteroids_instanced.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>54</integer>
+			<integer>58</integer>
 		</dict>
 		<key>4.advanced_opengl__11.1.anti_aliasing_msaa.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>55</integer>
+			<integer>59</integer>
 		</dict>
 		<key>4.advanced_opengl__11.2.anti_aliasing_offscreen.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>56</integer>
+			<integer>60</integer>
 		</dict>
 		<key>4.advanced_opengl__2.stencil_testing.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>44</integer>
+			<integer>45</integer>
 		</dict>
 		<key>4.advanced_opengl__3.1.blending_discard.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>45</integer>
+			<integer>46</integer>
 		</dict>
 		<key>4.advanced_opengl__3.2.blending_sort.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>46</integer>
+			<integer>47</integer>
 		</dict>
 		<key>4.advanced_opengl__5.1.framebuffers.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>47</integer>
+			<integer>48</integer>
 		</dict>
 		<key>4.advanced_opengl__5.2.framebuffers_exercise1.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>48</integer>
+			<integer>49</integer>
 		</dict>
 		<key>4.advanced_opengl__6.1.cubemaps_skybox.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>84</integer>
+			<integer>50</integer>
 		</dict>
 		<key>4.advanced_opengl__6.2.cubemaps_environment_mapping.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>49</integer>
+			<integer>51</integer>
 		</dict>
 		<key>4.advanced_opengl__8.advanced_glsl_ubo.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>50</integer>
+			<integer>52</integer>
 		</dict>
 		<key>4.advanced_opengl__9.1.geometry_shader_houses.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>91</integer>
+			<integer>53</integer>
 		</dict>
 		<key>4.advanced_opengl__9.2.geometry_shader_exploding.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>51</integer>
+			<integer>54</integer>
 		</dict>
 		<key>4.advanced_opengl__9.3.geometry_shader_normals.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>52</integer>
+			<integer>55</integer>
 		</dict>
 		<key>5.advanced_lighting__1.advanced_lighting.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>57</integer>
+			<integer>61</integer>
 		</dict>
 		<key>5.advanced_lighting__2.gamma_correction.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>58</integer>
+			<integer>62</integer>
 		</dict>
 		<key>5.advanced_lighting__3.1.1.shadow_mapping_depth.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>59</integer>
+			<integer>63</integer>
 		</dict>
 		<key>5.advanced_lighting__3.1.2.shadow_mapping_base.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>60</integer>
+			<integer>64</integer>
 		</dict>
 		<key>5.advanced_lighting__3.1.3.shadow_mapping.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>61</integer>
+			<integer>65</integer>
 		</dict>
 		<key>5.advanced_lighting__3.2.1.point_shadows.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>62</integer>
+			<integer>66</integer>
 		</dict>
 		<key>5.advanced_lighting__3.2.2.point_shadows_soft.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>63</integer>
+			<integer>67</integer>
 		</dict>
 		<key>5.advanced_lighting__4.normal_mapping.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>64</integer>
+			<integer>68</integer>
 		</dict>
 		<key>5.advanced_lighting__5.1.parallax_mapping.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>65</integer>
+			<integer>69</integer>
 		</dict>
 		<key>5.advanced_lighting__5.2.steep_parallax_mapping.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>66</integer>
+			<integer>70</integer>
 		</dict>
 		<key>5.advanced_lighting__5.3.parallax_occlusion_mapping.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>67</integer>
+			<integer>71</integer>
 		</dict>
 		<key>5.advanced_lighting__6.hdr.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>68</integer>
+			<integer>72</integer>
 		</dict>
 		<key>5.advanced_lighting__7.bloom.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>69</integer>
+			<integer>73</integer>
 		</dict>
 		<key>5.advanced_lighting__8.1.deferred_shading.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>70</integer>
+			<integer>74</integer>
 		</dict>
 		<key>5.advanced_lighting__8.2.deferred_shading_volumes.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>71</integer>
+			<integer>75</integer>
 		</dict>
 		<key>5.advanced_lighting__9.ssao.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>72</integer>
+			<integer>76</integer>
 		</dict>
 		<key>6.pbr__1.1.lighting.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>73</integer>
+			<integer>77</integer>
 		</dict>
 		<key>6.pbr__1.2.lighting_textured.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>75</integer>
+			<integer>79</integer>
 		</dict>
 		<key>6.pbr__2.1.1.ibl_irradiance_conversion.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>77</integer>
+			<integer>81</integer>
 		</dict>
 		<key>6.pbr__2.1.2.ibl_irradiance.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>76</integer>
+			<integer>80</integer>
 		</dict>
 		<key>6.pbr__2.2.1.ibl_specular.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>74</integer>
+			<integer>78</integer>
 		</dict>
 		<key>6.pbr__2.2.2.ibl_specular_textured.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>78</integer>
+			<integer>82</integer>
 		</dict>
 		<key>7.in_practice__1.debugging.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>79</integer>
+			<integer>83</integer>
 		</dict>
 		<key>7.in_practice__2.text_rendering.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>80</integer>
+			<integer>84</integer>
 		</dict>
 		<key>8.guest_2020_oit.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>83</integer>
+			<integer>92</integer>
 		</dict>
 		<key>8.guest_2020_skeletal_animation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>89</integer>
+			<integer>85</integer>
 		</dict>
 		<key>8.guest_2021_1.scene_1.scene_graph.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>90</integer>
+			<integer>86</integer>
 		</dict>
 		<key>8.guest_2021_1.scene_2.frustum_culling.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>85</integer>
+			<integer>88</integer>
 		</dict>
 		<key>8.guest_2021_2.csm.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>86</integer>
+			<integer>87</integer>
 		</dict>
 		<key>8.guest_2021_4.dsa.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>81</integer>
+			<integer>90</integer>
 		</dict>
 		<key>8.guest_2022_5.computeshader_helloworld.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>82</integer>
+			<integer>91</integer>
 		</dict>
 		<key>8.guest_2022_6.physically_based_bloom.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>88</integer>
+			<integer>89</integer>
 		</dict>
 		<key>ALL_BUILD.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>1</integer>
 		</dict>
 		<key>GLAD.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>STB_IMAGE.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>ZERO_CHECK.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
+		</dict>
+		<key>quick_test.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -562,12 +567,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>54AD9F9F934B48B4B874F57C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5663E95142E24EFE89C33E03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5A4F6BE5F6A440E7A031EE68</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>5C08B4036E5547FB909C8E0F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E03415028521DF4008FC498</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -778,6 +798,11 @@
 			<true/>
 		</dict>
 		<key>CF413B7E20F24049AD955446</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1197B3DAC4442E9B5E9EEA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

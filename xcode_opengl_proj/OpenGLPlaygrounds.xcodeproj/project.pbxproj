@@ -2949,6 +2949,9 @@
 		5E0E6F3CF73046E5985E6AE4 /* text.fs */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = text.fs; path = src/7.in_practice/2.text_rendering/text.fs; sourceTree = SOURCE_ROOT; };
 		5E38A35766BA4166AA57710E /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		5E8FA4EE2857673B007A31E4 /* my_hello_triangle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = my_hello_triangle.cpp; path = Playgrounds/my_hello_triangle.cpp; sourceTree = "<group>"; };
+		5E8FA4F028583F0E007A31E4 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		5E8FA4F128585D27007A31E4 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Shader.h; path = Playgrounds/Shader.h; sourceTree = "<group>"; };
+		5E8FA4F228585D28007A31E4 /* my_shaders_uniform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = my_shaders_uniform.cpp; path = Playgrounds/my_shaders_uniform.cpp; sourceTree = "<group>"; };
 		5EFB513B55A14D809621802C /* 6.hdr.vs */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = 6.hdr.vs; path = src/5.advanced_lighting/6.hdr/6.hdr.vs; sourceTree = SOURCE_ROOT; };
 		5FC7503D012446F58E370340 /* shadow_mapping.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = shadow_mapping.cpp; path = src/5.advanced_lighting/3.1.3.shadow_mapping/shadow_mapping.cpp; sourceTree = SOURCE_ROOT; };
 		6027289CA26E410C86B15AD3 /* 1.1.pbr.vs */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = 1.1.pbr.vs; path = src/6.pbr/1.1.lighting/1.1.pbr.vs; sourceTree = SOURCE_ROOT; };
@@ -4705,6 +4708,8 @@
 		5A9975FB5E914F3EA035C79F /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E8FA4F228585D28007A31E4 /* my_shaders_uniform.cpp */,
+				5E8FA4F128585D27007A31E4 /* Shader.h */,
 				6A8620A60738497A92BD1BE0 /* shaders_uniform.cpp */,
 			);
 			name = "Source Files";
@@ -4871,6 +4876,7 @@
 			children = (
 				5E03416228521F69008FC498 /* quick_test.cpp */,
 				5E03416328521F69008FC498 /* quick_test.hpp */,
+				5E8FA4F028583F0E007A31E4 /* Shader.h */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";

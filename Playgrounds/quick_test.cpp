@@ -5,53 +5,36 @@
 //  Created by Chevis Li on 2022/6/9.
 //
 
-#include "quick_test.hpp"
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <stb_image.h>
+
+#include <learnopengl/filesystem.h>
+#include <learnopengl/shader_s.h>
 
 #include <iostream>
-#include <cmath>
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 void processInput(GLFWwindow *window);
 
-// MARK: settings
+// settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
-const char *vertexShaderSource ="#version 330 core\n"
-                                "layout (location = 0) in vec3 aPos;\n"
-                                "layout (location = 1) in vec3 aColor;\n"
-                                "out vec3 ourColor;\n" // 为片段着色器指定一个颜色输出
-                                "void main()\n"
-                                "{\n"
-                                "gl_Position = vec4(aPos, 1.0);\n"
-                                "ourColor = aColor;\n"
-                                "}\n\0";
-
-const char *fragmentShaderSource =  "#version 330 core\n"
-                                    "out vec4 FragColor;\n"
-                                    "in vec3 ourColor;"
-                                    "void main()\n"
-                                    "{\n"
-                                    "FragColor = vec4(ourColor, 1.0);\n"
-                                    "}\n\0";
-
 int main()
 {
-    // MARK: glfw: initialize and configure
+    // glfw: initialize and configure
     // ------------------------------
     glfwInit();
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-    
+
 #ifdef __APPLE__
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 #endif
-    
-    // MARK: glfw window creation
+
+    // glfw window creation
     // --------------------
     GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "LearnOpenGL", NULL, NULL);
     if (window == NULL)
@@ -62,95 +45,114 @@ int main()
     }
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-    
-    // MARK: glad: load all OpenGL function pointers
+
+    // glad: load all OpenGL function pointers
     // ---------------------------------------
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
         return -1;
     }
-    
-    // MARK: build and compile our shader program
-    // ---------------------------------------
-    
-    // 顶点着色器(Vertex Shader)
-    unsigned int vertexShader = glCreateShader(GL_VERTEX_SHADER); // this is a vertex shader
-    glShaderSource(vertexShader, 1, &vertexShaderSource, NULL); // copy source code strings to object
-    glCompileShader(vertexShader);
-    // 检测shader是否出错
-    int success;
-    char infoLog[512];
-    glGetShaderiv(vertexShader, GL_COMPILE_STATUS, &success);
-    if(!success){
-        glGetShaderInfoLog(vertexShader, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::VERTEX::COMPILATION_FAILED\n" << infoLog << std::endl;
-    }
-    
-    // 片段着色器(Fragment Shader) 计算像素最后的颜色输出
-    // RGBA(r, g, b, alpha)
-    unsigned int fragmentShader = glCreateShader(GL_FRAGMENT_SHADER);
-    glShaderSource(fragmentShader, 1, &fragmentShaderSource, NULL);
-    glCompileShader(fragmentShader);
-    // check for shader compile errors
-    glGetShaderiv(fragmentShader, GL_COMPILE_STATUS, &success);
-    if (!success)
-    {
-        glGetShaderInfoLog(fragmentShader, 512, NULL, infoLog);
-        std::cout << "ERROR::SHADER::FRAGMENT::COMPILATION_FAILED\n" << infoLog << std::endl;
-    }
-    
-    // Link shaders: 着色器程序对象(Shader Program Object)是多个着色器合并之后并最终链接完成的版本
-    // 若使用shader，必须将它们链接成为一个着色器程序对象，然后在渲染对象时激活这个着色器程序
-    unsigned int shaderProgram;
-    shaderProgram = glCreateProgram();
-    glAttachShader(shaderProgram, vertexShader);
-    glAttachShader(shaderProgram, fragmentShader);
-    glLinkProgram(shaderProgram);
-    // 检测链接着色器程序是否失败，并获取相应的日志
-    glGetProgramiv(shaderProgram, GL_LINK_STATUS, &success);
-    if(!success) {
-        glGetProgramInfoLog(shaderProgram, 512, NULL, infoLog);
-    }
-    // link之后就可以把创建的shaders删掉
-    glDeleteShader(vertexShader);
-    glDeleteShader(fragmentShader);
-    
-    // MARK: set up vertex data (and buffer(s)) and configure vertex attributes
-    // MARK: 数据结构（raw data）-> create obj -> bind obj to target -> config obj
-    // 渲染三角形 -> 三个顶点 -> We deﬁne them in normalized device coordinates (the visible region of OpenGL) in a float array:
+
+    // build and compile our shader zprogram
+    // ------------------------------------
+    Shader ourShader("4.2.texture.vs", "4.2.texture.fs");
+
+    // set up vertex data (and buffer(s)) and configure vertex attributes
     // ------------------------------------------------------------------
-    // [Vertex1, Vertex2, Vertex3] = [[X,Y,Z,R,G,B], [X,Y,Z,R,G,B], [X,Y,Z,R,G,B]]
     float vertices[] = {
-        // 位置              // 颜色
-        0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,   // 右下
-        -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,   // 左下
-        0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f    // 顶部
+        // positions          // colors           // texture coords
+         0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // top right
+         0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // bottom right
+        -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // bottom left
+        -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // top left
     };
-    
-    
-    // 创建顶点缓冲对象（VBO）& 创建顶点数组对象（VAO）& 元素缓冲对象
-    unsigned int VAO, VBO, EBO;
+    unsigned int indices[] = {
+        0, 1, 3, // first triangle
+        1, 2, 3  // second triangle
+    };
+    unsigned int VBO, VAO, EBO;
     glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);  // VBO object
-    glGenBuffers(1, &EBO);  // EBO object
-    
-    // bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
+    glGenBuffers(1, &VBO);
+    glGenBuffers(1, &EBO);
+
     glBindVertexArray(VAO);
-    // 将 新创建的VBO bind到GL_ARRAY_BUFFER目标（Target）上
-    // From that point on any buffer calls we make (on the GL_ARRAY_BUFFER target) will be used to configure the currently bound buffer, which is VBO
+
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    // creates and initializes a buffer object's data store 将用户定义的数据复制到当前绑定缓冲
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+    // position attribute
+    // 设置index=0的vertex attribute
+    // 这个attribute有3个components(XYZ)
+    // 数据类型为GL_FLOAT
+    // 不需要归一化（因为定义的vertices数组里面就是归一化的）
+    // 在数组vertices中，两组XYZ之间间隔8个floats（XYZRGBST)
+    // 当前绑定在GL_ARRAY_BUFFER target上的data store是VBO，VBO的数据是由vertices这个array提供的；在这个array中，第一组XYZ的pointer为(void*)0
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
+    // 上面这行定义的attribute pointer 0在（唯一一个）VAO中，因此，我们只用index=0就能定位此pointer
+    glEnableVertexAttribArray(0);
+    // color attribute
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+    // texture coord attribute
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+    glEnableVertexAttribArray(2);
+
+    // load and create a texture
+    // -------------------------
+    unsigned int texture1, texture2;
+    // texture 1
+    glGenTextures(1, &texture1); // 生成1个纹理对象，然后储存在texture数组中（这个参数可以是数组）
+    glBindTexture(GL_TEXTURE_2D, texture1);  // bind a named texture to a texturing target 让之后任何的纹理指令都可以配置当前绑定的纹理
+    // 为当前绑定的纹理对象设置环绕wrapping、过滤filtering方式
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // 加载并生成纹理
+    int width, height, nrChannels; // nrChannels是颜色通道的数量
+    stbi_set_flip_vertically_on_load(true); // tell stb_image.h to flip loaded texture's on the y-axis.
+    unsigned char *data = stbi_load(FileSystem::getPath("resources/textures/container.jpg").c_str(), &width, &height, &nrChannels, 0);
+    if (data)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data); // 使用前面载入的图片数据生成一个纹理，第二个参数为0，因此只生成base-level纹理图像
+        glGenerateMipmap(GL_TEXTURE_2D); // 生成多级渐远纹理
+    } else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(data); // 生成了纹理和相应的多级渐远纹理后，释放图像的内存
+    // texture 2
+    glGenTextures(1, &texture2); // 生成1个纹理对象，然后储存在texture数组中（这个参数可以是数组）
+    glBindTexture(GL_TEXTURE_2D, texture2);  // bind a named texture to a texturing target 让之后任何的纹理指令都可以配置当前绑定的纹理
+    // 为当前绑定的纹理对象设置环绕wrapping、过滤filtering方式
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    // 加载并生成纹理
+    data = stbi_load(FileSystem::getPath("resources/textures/awesomeface.png").c_str(), &width, &height, &nrChannels, 0);
+    if (data)
+    {
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data); // 使用前面载入的图片数据生成一个纹理，第二个参数为0，因此只生成base-level纹理图像
+        glGenerateMipmap(GL_TEXTURE_2D); // 生成多级渐远纹理
+    } else
+    {
+        std::cout << "Failed to load texture" << std::endl;
+    }
+    stbi_image_free(data); // 生成了纹理和相应的多级渐远纹理后，释放图像的内存
     
-    // 设置顶点属性指针
-    // 位置属性 "layout (location = 0) in vec3 aPos;\n"
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);   // the index of the generic vertex attribute is 0
-    glEnableVertexAttribArray(0);   // index 0
-    // 颜色属性 "layout (location = 1) in vec3 aColor;\n"
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));   // the index of the generic vertex attribute is 0
-    glEnableVertexAttribArray(1);   // index 1
-        
+    // tell opengl for each sampler to which texture unit it belongs to (only has to be done once)
+    // -------------------------------------------------------------------------------------------
+    ourShader.use(); // don't forget to activate/use the shader before setting uniforms!
+    // either set it manually like so:
+    glUniform1i(glGetUniformLocation(ourShader.ID, "texture1"), 0);
+    // or set it via the texture class
+    ourShader.setInt("texture2", 1);
+    
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -158,40 +160,35 @@ int main()
         // input
         // -----
         processInput(window);
-        
+
         // render
         // ------
-        // 清除颜色缓冲
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
+
+        // bind Texture
+        glActiveTexture(GL_TEXTURE0); // 绑定纹理之前先激活纹理单元
+        glBindTexture(GL_TEXTURE_2D, texture1); // 绑定纹理到当前激活的纹理单元，纹理单元GL_TEXTTURE0默认总是被激活
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, texture2); // 绑定纹理到当前激活的纹理单元，纹理单元GL_TEXTTURE0默认总是被激活
         
-        // 激活这个程序对象
-        glUseProgram(shaderProgram);
-        
-        // 更新uniform颜色
-//        float timeValue = glfwGetTime();
-//        float greenValue = static_cast<float>(sin(timeValue) / 2.0 + 0.5);
-//        int vertexColorLocation = glGetUniformLocation(shaderProgram, "ourColor");
-//        // 查询uniform地址不要求你之前使用过着色器程序，但是更新一个uniform之前你必须先使用程序（调用glUseProgram)，因为它是在**当前激活**的着色器程序中设置uniform的。
-//        glUniform4f(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f); // 设置uniform值，4f means 4 floats are needed
-        
-        // 绘制三角形
-        glBindVertexArray(VAO);// seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        // glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0); // glDrawElements来替换glDrawArrays函数，表示我们要从索引缓冲区渲染三角形
-        
+        // render container
+        ourShader.use();
+        glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
         glfwSwapBuffers(window);
         glfwPollEvents();
     }
-    
+
     // optional: de-allocate all resources once they've outlived their purpose:
     // ------------------------------------------------------------------------
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-    glDeleteProgram(shaderProgram);
-    
+    glDeleteBuffers(1, &EBO);
+
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
     glfwTerminate();
